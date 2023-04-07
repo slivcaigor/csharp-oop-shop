@@ -6,11 +6,11 @@
         private readonly int _codice;
         // Proprietà pubblica per ottenere il codice del prodotto (solo in lettura)
         public int Codice => _codice;
-        // Proprietà pubbliche per nome, descrizione, prezzo e iva del prodotto (sia in lettura che in scrittura)
-        public string Nome { get; set; }
-        public string Descrizione { get; set; }
-        public decimal Prezzo { get; set; }
-        public int Iva { get; set; }
+        // Proprietà pubbliche per nome, descrizione, prezzo e iva del prodotto 
+        public string Nome;
+        public string Descrizione;
+        public decimal Prezzo;
+        public int Iva;
 
         // Creo un costruttore della classe Prodotto che prende come argomenti il nome, la descrizione, il prezzo e l'iva del prodotto
         public Prodotto(string nome, string descrizione, decimal prezzo, int iva)
