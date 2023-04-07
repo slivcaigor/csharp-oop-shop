@@ -45,5 +45,13 @@
             return Codice + " - " + Nome;
         }
 
+        // Metodo che restituisce una stringa rappresentante il codice del prodotto formattato con un pad di 0 a sinistra fino a 8 cifre
+        public string CodiceConPad()
+        {
+            // Converto il codice del prodotto in una stringa e applico un pad di 0 a sinistra fino a raggiungere 8 caratteri
+            return Codice.ToString().PadLeft(8, '0');
+        }
+
+
     }
 }

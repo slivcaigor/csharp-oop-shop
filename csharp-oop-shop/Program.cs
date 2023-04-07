@@ -1,10 +1,4 @@
-﻿/*
-BONUS:
-- create un metodo che restituisca il codice con un pad left di 0 per arrivare a 8 caratteri (ad esempio codice 91 diventa 00000091, mentre codice 123445567 resta come è)
-- Usando un array, dichiarate un elenco dei prodotti di un negozio e inseriteci al suo interno qualche prodotto che vi aspettate di trovare nel negozio. Stampate poi l’elenco dei vostri prodotti che avete previsto nel negozio.
-*/
-
-namespace csharp_oop_shop
+﻿namespace csharp_oop_shop
 {
     internal class Program
     {
@@ -15,6 +9,27 @@ namespace csharp_oop_shop
 
             // Stampo le informazioni sul prodotto utilizzando il metodo Console.WriteLine()
             Console.WriteLine($"Codice: {nft.Codice}\nNome: {nft.Nome}\nDescrizione: {nft.Descrizione}\nPrezzo Base: ${nft.PrezzoBase()}\nPrezzo Ivato: ${nft.PrezzoConIva()}\nNome Esteso: {nft.NomeEsteso()}");
+
+            Console.WriteLine();
+
+            // Creo un array di prodotti digitali
+            Prodotto[] prodottiNFT = new Prodotto[]
+            {
+                new Prodotto("CryptoZombie", "Zombie digitale collezionabile", 6756m, 12),
+                new Prodotto("CryptoPunk", "Personaggio punk digitale collezionabile", 5635m, 15),
+                new Prodotto("Bored Ape", "Scimmia digitale collezionabile", 45623m, 20),
+                new Prodotto("Art Blocks", "Opere d'arte generative digitali collezionabili", 4354m, 25),
+                new Prodotto("Pudgy Penguins", "Pinguini digitali collezionabili", 1436m, 18)
+            };
+
+            // Stampo l'elenco dei prodotti
+            foreach (Prodotto prodotto in prodottiNFT)
+            {
+                Console.WriteLine($"Codice: {prodotto.CodiceConPad()} - Nome: {prodotto.Nome}");
+            }
+
+            Console.ReadLine();
+
 
         }
     }
